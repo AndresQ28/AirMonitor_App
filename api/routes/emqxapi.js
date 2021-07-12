@@ -164,9 +164,9 @@ global.check_mqtt_superuser = async function checkMqttSuperUser(){
         {
           publish: ["#"],
           subscribe: ["#"],
-          userId: "aq2021",
-          username: "user",
-          password: "pass",
+          userId: "emqxmqttsuperuser",
+          username: process.env.EMQX_NODE_SUPERUSER_USER,
+          password: process.env.EMQX_NODE_SUPERUSER_PASSWORD,
           type: "superuser",
           time: Date.now(),
           updatedTime: Date.now()
@@ -182,7 +182,10 @@ global.check_mqtt_superuser = async function checkMqttSuperUser(){
   }
 }
 
+
+
 setTimeout(() => {
+  console.log("LISTING RESORUCES!!!!!!!!!");
   listResources();
 }, process.env.EMQX_RESOURCES_DELAY);
 

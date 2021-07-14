@@ -22,6 +22,7 @@ const auth = {
   }
 };
 
+
 //GET DEVICES
 router.get("/device", checkAuth, async (req, res) => {
   try {

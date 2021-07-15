@@ -33,7 +33,7 @@ module.exports = app;
 
 //listener
 app.listen(process.env.API_PORT, () => {
-  console.log("API server listening on port 3001");
+  console.log("API server listening on port " + process.env.API_PORT);
 });
 
 

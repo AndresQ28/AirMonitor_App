@@ -73,6 +73,7 @@ mongoose.connect(uri, options).then(
     console.log("*******************************".green);
     console.log("\n");
     global.check_mqtt_superuser();
+    console.log("url: "+uri);
   },
   err => {
     console.log("\n");
